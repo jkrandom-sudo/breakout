@@ -44,6 +44,9 @@ STRINGS: dict[str, dict[str, Any]] = {
         "enter_name": "Enter your name",
     },
 }
+# Aliases for short language codes used by breakout_game.py
+STRINGS["zh"] = STRINGS["zh_CN"]
+STRINGS["en"] = STRINGS["en_US"]
 
 DEFAULT_LANG = "zh_CN"
 
