@@ -10,6 +10,8 @@ import curses
 import math
 from typing import TYPE_CHECKING, Any
 
+from i18n import t
+
 if TYPE_CHECKING:
     from breakout_game import BreakoutGame
 
@@ -125,10 +127,10 @@ class CursesRenderer:
         self._addstr(y, x, title_text, curses.color_pair(CP_TITLE) | curses.A_BOLD)
 
         if not scores:
-            msg = game.get_text("no_scores") if hasattr(game, "get_text") else "暂无记录"
+            msg = t("no_scores", game.language)
             self._addstr(y + 2, (w - len(msg)) // 2, msg)
         else:
-            header = f"{'#':>3}  {'Name':<16}  {'Score':>6}  {'Date':<12}"
+            header = f"{'#':>3}  {t('col_name', game.language):<16}  {t('col_score', game.language):>6}  {t('col_date', game.language):<12}"
             self._addstr(y + 2, (w - len(header)) // 2, header, curses.A_UNDERLINE)
             for i, entry in enumerate(scores):
                 line = f"{i + 1:>3}  {entry.name:<16}  {entry.score:>6}  {entry.date:<12}"

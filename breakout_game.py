@@ -124,6 +124,7 @@ class BreakoutGame:
             "enter_name": "请输入你的名字",
             "new_high_score": "新纪录！",
             "controls_title": "操作说明",
+            "no_scores": "暂无记录",
             "controls": [
                 "← → : 移动挡板",
                 "空格 : 发射球",
@@ -159,6 +160,7 @@ class BreakoutGame:
             "enter_name": "Enter your name",
             "new_high_score": "New High Score!",
             "controls_title": "Controls",
+            "no_scores": "No scores yet",
             "controls": [
                 "← → : Move Paddle",
                 "Space: Launch Ball",

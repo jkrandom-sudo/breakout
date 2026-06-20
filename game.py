@@ -18,6 +18,7 @@ import time
 from typing import Any
 
 from breakout_game import BreakoutGame
+from i18n import t
 from renderer import CursesRenderer
 from scores import ScoreManager
 
@@ -48,7 +49,7 @@ def main(stdscr: Any) -> None:
             h, w = stdscr.getmaxyx()
             if h < 24 or w < 80:
                 stdscr.erase()
-                msg = "Terminal too small! Need at least 80x24."
+                msg = t("terminal_too_small", game.language)
                 try:
                     stdscr.addstr(0, 0, msg)
                 except curses.error:
